@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Wardrobe</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Your Virtual Wardrobe</h1>
+    <div class="container">
+        <h2>Male shoes</h2>
+        <img src="{% static 'media/maleshoes.jpg' %}" alt="shoes">
+    </div>
+
+    <div class="container">
+        <h2>Suites</h2>
+        <img src="{% static 'media/suites.jpg' %}" alt="suites">
+    </div>
+
+    <div class="container">
+        <h2>Femalewear</h2>
+        <img src="{% static 'media/femalewear.jpg' %}" alt="femalewear">
+
+    </div>
+    
+    <div class="container">
+        <h2>Casual Wear</h2>
+        <img src="{% static 'media/casualwear.jpg' %}" alt="casual">
+    </div>
+
+
+</body>
+
+<a href="{% url 'trends:home' %}">Back to Home</a>
+</html>
