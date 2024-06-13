@@ -219,3 +219,19 @@ form button:hover {
     width: 50%;  /* Adjusts width to the container */
     height: auto;  /* This maintains the aspect ratio */
 }
+
+
+/* Container for images */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 20px; /* Space between images */
+}
+
+/* Style for individual images */
+.container img {
+    width: 45%; /* Adjust the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images don't exceed their container */
+}
