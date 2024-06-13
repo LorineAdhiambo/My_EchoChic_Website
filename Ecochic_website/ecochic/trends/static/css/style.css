@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    color: #5b8c5a;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #5b8c5a 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+main p {
+    margin-bottom: 10px;
+}
+
+main img {
+    max-width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Home Page Styles */
+#start-button {
+    background: #5b8c5a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background: #466b47;
+}
+
+/* Team Page Styles */
+.team-member {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.team-member img {
+    max-width: 150px;
+    margin-right: 20px;
+    float: left;
+}
+
+.team-member p {
+    margin: 0;
+}
+
+/* Milestones Page Styles */
+.milestones ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.milestones li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Trending Page Styles */
+.trending ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trending li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Wardrobe Page Styles */
+.wardrobe .container {
+    margin-bottom: 20px;
+}
+
+.wardrobe img {
+    max-width: 100%;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    background: #5b8c5a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #466b47;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header #branding, header nav, header nav ul, header nav ul li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    
+    header nav ul {
+        margin-top: 10px;
+    }
+
+    .team-member img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+}

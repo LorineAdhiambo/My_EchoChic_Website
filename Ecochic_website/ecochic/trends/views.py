@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.conf import settings
 import os
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 def home(request):
@@ -54,3 +56,18 @@ def fetch_trends():
         {'title': 'Upcycled Fashion', 'description': 'Learn about the trend of upcycling old clothes into new, stylish pieces.'},
         {'title': 'Sustainable Brands', 'description': 'Check out these brands that are leading the way in sustainable fashion.'}
     ]
+
+
+def custom_login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('trends:home')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'registration/login.html', {'form': form})
