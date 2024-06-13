@@ -46,28 +46,15 @@ def milestones(request):
     return render(request, 'trends/milestones.html', context)
 
 def trending(request):
-    trending = fetch_trends()
-    return render(request, 'trends/trending.html', {'trends': trending})
-
-# Placeholder function for fetch_trends
-def fetch_trends():
-    return [
+    trending = [
         {'title': 'Eco-Friendly Fabrics', 'description': 'Discover the latest in eco-friendly fabrics that are making waves in sustainable fashion.'},
         {'title': 'Upcycled Fashion', 'description': 'Learn about the trend of upcycling old clothes into new, stylish pieces.'},
         {'title': 'Sustainable Brands', 'description': 'Check out these brands that are leading the way in sustainable fashion.'}
     ]
+    context = {'trending': trending}
+    return render(request, 'trends/trending.html', context)
 
 
 def custom_login(request):
-    if request.method == 'POST':
-        form = AuthenticationForm(request, request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('trends:home')
-    else:
         form = AuthenticationForm()
-    return render(request, 'registration/login.html', {'form': form})
+        return render(request, 'registration/login.html', {'form': form})

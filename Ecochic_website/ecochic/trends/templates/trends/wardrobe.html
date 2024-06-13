@@ -11,27 +11,45 @@
     <h1>Your Virtual Wardrobe</h1>
     <div class="container">
         <h2>Male shoes</h2>
-        <img src="{% static 'media/maleshoes.jpg' %}" alt="shoes">
+        <div class="responsive">
+            <img src="{% static 'media/maleshoes.jpg' %}" alt="shoes">
+        </div>
     </div>
 
     <div class="container">
         <h2>Suites</h2>
-        <img src="{% static 'media/suites.jpg' %}" alt="suites">
+        <div class="responsive">
+            <img src="{% static 'media/suites.jpg' %}" alt="suites">
+        </div>
     </div>
 
     <div class="container">
-        <h2>Femalewear</h2>
-        <img src="{% static 'media/femalewear.jpg' %}" alt="femalewear">
-
+        <h2>Femalewears</h2>
+        <div class="responsive">
+            <img src="{% static 'media/femalewear.jpg' %}" alt="femalewear">
+            
+        </div>
     </div>
     
     <div class="container">
-        <h2>Casual Wear</h2>
-        <img src="{% static 'media/casualwear.jpg' %}" alt="casual">
+        <h2>Casual Wears</h2>
+        <div class="responsive">
+            <img src="{% static 'media/casual.jpg' %}" alt="casual">
+            <!-- <img src="{% static 'media\dresses.mp4' %}" alt="dresses"> -->
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Dresses</h2>
+        <div class="responsive">
+            <img src="{% static 'media\dresses.mp4' %}" alt="dresses">
+        </div>
     </div>
 
 
 </body>
 
 <a href="{% url 'trends:home' %}">Back to Home</a>
+<br>
+<a href="{% url 'trends:milestones' %}">Next Page</a>
 </html>

@@ -11,16 +11,24 @@
     <div class="container">
         <h1>Current Fashion Trends</h1>
         <ul>
-            {% for trend in trends %}
-                <li>{{ trend }}</li>
+            {% for trending in trending %}
+                <li>
+                    <h2>{{ trending.title }}</h2>
+                    <p>{{ trending.description }}</p>
+                </li>
             {% endfor %}
         </ul>
     </div>
-    <a href="https://unsplash.com/s/photos/fashion-trend">Explore more!</a>
+
+    <div class="container">
+        <a href="https://unsplash.com/s/photos/fashion-trend">Explore more!</a>
+    </div>
     <br>
 </body>
 
 <br>
 
 <a href="{% url 'trends:home' %}">Back to Home</a>
+<br>
+<a href="{% url 'trends:login' %}">Next Page</a>
 </html>

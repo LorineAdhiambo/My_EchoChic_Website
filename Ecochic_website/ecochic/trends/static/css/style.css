@@ -200,8 +200,22 @@ form button:hover {
     }
 
     .team-member img {
-        float: none;
-        display: block;
-        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
     }
+}
+
+/* Fixed Size for Images */
+.fixed-size img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Responsive Size for Images */
+.responsive img {
+    width: 50%;  /* Adjusts width to the container */
+    height: auto;  /* This maintains the aspect ratio */
 }
